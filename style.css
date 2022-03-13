@@ -1,0 +1,102 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+img {
+   max-width: 100%;
+   height: auto;
+}
+body {
+   font-family: 'montserrat', sans-serif;
+   background-image: url(img/weather.png);
+   background-size: cover;
+   background-position: top center;
+}
+.app-wrap {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   height: 100vh;
+   background-image: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .6));
+}
+header {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 50px 15px 15px;
+}
+header input {
+   width: 100%;
+   max-width: 250px;
+   padding: 10px 15px;
+   border: none;
+   border-bottom: 3px solid #da450f;
+   outline: none;
+   background-color: rgba(255, 255, 255, 0.4);
+   color: #122;
+   font-weight: 800;
+   text-transform: capitalize;
+   font-size: 20px;
+   transition: 0.2s ease-out;
+   border-radius: 17px 0px 17px 0px;
+}
+input::placeholder {
+   color: rgb(240, 228, 228); 
+}
+header input:focus {
+   background-color: rgba(255, 255, 255, 0.6);
+   border-radius: 0px 17px 0px 17px;
+}
+main {
+   padding: 25px 25px 50px;
+   margin-top: 20vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+}
+.location .city {
+   color: #fff;
+   font-size: 32px;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+.location .date {
+   font-size: 17px;
+   color: #fff;
+}
+.main-temp .temp {
+   color: #fff;
+   font-size: 100px;
+   font-weight: 900;
+   margin: 30px 0;
+   text-shadow: 2px 10px rgba(0,0,0, 0.6);
+}
+.main-temp span {
+  font-weight: 500; 
+}
+.main-temp .weather {
+   color: #fff;
+   font-size: 32px;
+   font-weight: 700;
+   font-style: italic;
+   margin-bottom: 15px;
+   text-shadow: 0px 3px rgba(0, 0, 0, .6);
+}
+.main-temp .hi-low {
+   color: #fff;
+   font-size: 25px;
+   font-weight: 500;
+    text-shadow: 0px 4px rgba(0, 0, 0, .4);
+}
+@media(max-width: 900px){
+   .app-wrap {
+      grid-template-columns: 100%;
+   }
+   main {
+      margin-top: 100px;
+   }
+   header {
+      transform: translateY(-150px);
+   }
+}
